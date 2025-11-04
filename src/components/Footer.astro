@@ -1,0 +1,110 @@
+---
+import { Icon } from 'astro-icon/components';
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="contacto">
+  <h2>Conectemos</h2>
+  <p class="footer-text">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+  <div class="social-links">
+    <a 
+      href="mailto:manuelprz0240@gmail.com" 
+      class="social-link" 
+      aria-label="Email"
+    >
+      <Icon name="fa-solid:envelope" />
+    </a>
+    
+    <a 
+      href="https://www.linkedin.com/in/manuel-per%C3%A9z-b74140293/" 
+      class="social-link" 
+      aria-label="LinkedIn" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <Icon name="fa-brands:linkedin" />
+    </a>
+    
+    <a 
+      href="https://github.com/Manuel-Prg" 
+      class="social-link" 
+      aria-label="GitHub" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <Icon name="fa-brands:github" />
+    </a>
+  </div>
+
+  <p class="copyright">© {currentYear} - Todos los derechos reservados</p>
+</footer>
+
+<style>
+  footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  :global(body.light-mode) footer {
+    background: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .footer-text {
+    color: #a0a0a0;
+    margin-top: 1rem;
+    transition: color 0.3s;
+  }
+
+  :global(body.light-mode) .footer-text {
+    color: #666;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: white; 
+    text-decoration: none;
+    font-size: 1.3rem; 
+  }
+  :global(body.light-mode) .social-link {
+    color: #333; 
+  }
+
+  .social-link:hover {
+    background: rgba(102, 126, 234, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+    transform: translateY(-3px);
+    
+  }
+
+  .copyright {
+    color: #666;
+    margin-top: 2rem;
+  }
+</style>

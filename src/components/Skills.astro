@@ -1,0 +1,60 @@
+---
+const skills = ["JavaScript", "TypeScript", "React", "Astro", "Node.js", "Tailwind CSS", "Python", "Next.js",  "Git", "GitHub",  "HTML", "CSS", "SQL"];
+---
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="skills-container">
+    {skills.map(skill => (
+      <div class="skill-badge">{skill}</div>
+    ))}
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .skill-badge {
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: default;
+  }
+
+  :global(body.light-mode) .skill-badge {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-badge:hover {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.5);
+    transform: scale(1.05);
+  }
+</style>

@@ -1,0 +1,67 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const projects = [
+  {
+    title: "E-Commerce Platform",
+    description: "Plataforma completa de comercio electrónico con pasarela de pagos y gestión de inventario",
+    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    tags: ["React", "Node.js", "MongoDB"],
+    link: "#"
+  },
+  {
+    title: "Dashboard Analytics",
+    description: "Sistema de análisis de datos en tiempo real con visualizaciones interactivas",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    tags: ["Vue.js", "D3.js", "Firebase"],
+    link: "#"
+  },
+  {
+    title: "App Móvil Fitness",
+    description: "Aplicación para seguimiento de ejercicios y nutrición con planes personalizados",
+    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
+    tags: ["React Native", "TypeScript", "Supabase"],
+    link: "#"
+  },
+  {
+    title: "CMS Headless",
+    description: "Sistema de gestión de contenidos con API GraphQL y editor WYSIWYG",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    tags: ["Next.js", "GraphQL", "PostgreSQL"],
+    link: "#"
+  }
+];
+---
+
+<section id="proyectos">
+  <h2>Proyectos Destacados</h2>
+  <div class="projects-grid">
+    {projects.map(project => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+</style>
