@@ -1,44 +1,46 @@
 ---
-import ProjectCard from './ProjectCard.astro';
+import ProjectCard from "./ProjectCard.astro";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Plataforma completa de comercio electrónico con pasarela de pagos y gestión de inventario",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-    tags: ["React", "Node.js", "MongoDB"],
-    link: "#"
+    title: "Pagina web informativa universitaria",
+    description:
+      "Pagina web informativa universitaria que muestra la informacion del Museo de la Casa de Agua",
+    image: "/images/casa-agua.png",
+    tags: ["React", "Tailwind CSS", "GSAP"],
+    link: "https://casa-agua.ujat.mx/",
   },
   {
-    title: "Dashboard Analytics",
-    description: "Sistema de análisis de datos en tiempo real con visualizaciones interactivas",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    tags: ["Vue.js", "D3.js", "Firebase"],
-    link: "#"
+    title: "Aplicación Movil Para Museo Universitario",
+    description: "Juego educativo tipo trivia para visitantes post-visita",
+    image: "/images/trivia.png",
+    tags: ["Flutter", "Dart", "LocalStorage"],
+    link: "https://github.com/Manuel-Prg/triva-casa-del-agua",
   },
   {
-    title: "App Móvil Fitness",
-    description: "Aplicación para seguimiento de ejercicios y nutrición con planes personalizados",
-    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
-    tags: ["React Native", "TypeScript", "Supabase"],
-    link: "#"
+    title: "Aplicación movil para la gestión de citas ",
+    description:
+      "Aplicación para seguimiento de citas con calendario y recordatorios",
+    image: "/images/tatuajes.png",
+    tags: ["Flutter", "Dart", "SQLite"],
+    link: "https://github.com/Manuel-Prg/sistema-tatuajes",
   },
   {
-    title: "CMS Headless",
-    description: "Sistema de gestión de contenidos con API GraphQL y editor WYSIWYG",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    tags: ["Next.js", "GraphQL", "PostgreSQL"],
-    link: "#"
-  }
+    title: "sistema web de registro de ponencias para conferencias",
+    description:
+      "Sistema de registro de ponencias el evento Muejeres en Acción",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+    tags: ["Next.js", "react", "CSS", "PostgreSQL", "Supabase"],
+    link: "https://github.com/Manuel-Prg/sistemaPonencias",
+  },
 ];
 ---
 
 <section id="proyectos">
   <h2>Proyectos Destacados</h2>
   <div class="projects-grid">
-    {projects.map(project => (
-      <ProjectCard {...project} />
-    ))}
+    {projects.map((project) => <ProjectCard {...project} />)}
   </div>
 </section>
 
